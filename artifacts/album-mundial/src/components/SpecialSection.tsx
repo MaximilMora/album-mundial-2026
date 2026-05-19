@@ -63,6 +63,43 @@ function SpecialStickerCard({ sticker, acquired, onToggle }: SpecialStickerCardP
   );
 }
 
+function CCStickerCard({ sticker, acquired, onToggle }: SpecialStickerCardProps) {
+  return (
+    <button
+      onClick={() => onToggle(sticker.id)}
+      title={acquired ? "Clic para quitar" : "Clic para marcar como obtenida"}
+      className={cn(
+        "relative flex flex-col items-center justify-between rounded-lg border-2 p-1.5 transition-all duration-200 cursor-pointer select-none",
+        "w-[72px] h-[92px] shrink-0",
+        acquired
+          ? "border-red-400 bg-gradient-to-b from-red-50 to-rose-100 shadow-md shadow-red-200"
+          : "border-gray-200 bg-white hover:border-red-200 hover:shadow-sm opacity-60"
+      )}
+    >
+      <span className="absolute top-1 left-1.5 text-[9px] font-bold text-gray-400 leading-none">
+        CC{sticker.number}
+      </span>
+      {acquired && (
+        <span className="absolute top-0.5 right-0.5 text-[10px] leading-none">⭐</span>
+      )}
+      <div className="flex-1 flex items-center justify-center mt-2">
+        <span className="text-2xl leading-none">⚽</span>
+      </div>
+      <div className="w-full flex flex-col items-center gap-0.5">
+        <span className="text-[8px] font-bold text-gray-800 leading-tight text-center max-w-full truncate px-0.5">
+          {sticker.label}
+        </span>
+        <span className="text-[7px] text-gray-500 leading-tight truncate max-w-full px-0.5">
+          {sticker.sublabel}
+        </span>
+        <span className="text-[7px] font-black px-1 rounded-full leading-tight bg-red-100 text-red-700">
+          CC
+        </span>
+      </div>
+    </button>
+  );
+}
+
 function Sticker00Card({ sticker, acquired, onToggle }: { sticker: SpecialSticker; acquired: boolean; onToggle: (id: string) => void }) {
   return (
     <button
@@ -101,15 +138,17 @@ function Sticker00Card({ sticker, acquired, onToggle }: { sticker: SpecialSticke
 interface SpecialSectionProps {
   sticker00: SpecialSticker;
   fwcStickers: SpecialSticker[];
+  ccStickers: SpecialSticker[];
   acquired: Set<string>;
   onToggle: (id: string) => void;
 }
 
-export function SpecialSection({ sticker00, fwcStickers, acquired, onToggle }: SpecialSectionProps) {
+export function SpecialSection({ sticker00, fwcStickers, ccStickers, acquired, onToggle }: SpecialSectionProps) {
   const s00Acquired = acquired.has(sticker00.id) ? 1 : 0;
   const fwcCount = fwcStickers.filter((s) => acquired.has(s.id)).length;
-  const total = 1 + fwcStickers.length;
-  const totalAcquired = s00Acquired + fwcCount;
+  const ccCount = ccStickers.filter((s) => acquired.has(s.id)).length;
+  const total = 1 + fwcStickers.length + ccStickers.length;
+  const totalAcquired = s00Acquired + fwcCount + ccCount;
 
   const introStickers = fwcStickers.filter((s) => (s.number as number) <= 8);
   const historyStickers = fwcStickers.filter((s) => (s.number as number) >= 9);
@@ -122,7 +161,7 @@ export function SpecialSection({ sticker00, fwcStickers, acquired, onToggle }: S
           <span className="text-xl">✨</span>
           <div>
             <h2 className="text-base font-black tracking-wide">Figuritas Especiales</h2>
-            <p className="text-[11px] text-gray-400">#00 · FWC1–8 Introducción · FWC9–19 Museo FIFA</p>
+            <p className="text-[11px] text-gray-400">#00 · FWC1–19 · CC1–12 Coca-Cola</p>
           </div>
         </div>
         <div className="flex items-center gap-3">
@@ -182,6 +221,27 @@ export function SpecialSection({ sticker00, fwcStickers, acquired, onToggle }: S
           <div className="flex flex-wrap gap-2">
             {historyStickers.map((s) => (
               <SpecialStickerCard key={s.id} sticker={s} acquired={acquired.has(s.id)} onToggle={onToggle} />
+            ))}
+          </div>
+        </div>
+
+        {/* CC 1–12: Coca-Cola exclusivas */}
+        <div>
+          <div className="flex items-center gap-2 mb-2">
+            <span className="bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full tracking-widest">
+              CC 1–12
+            </span>
+            <span className="text-xs text-gray-500 font-medium">Exclusivas Coca-Cola × Panini — Solo en botellas especiales</span>
+            <span className="ml-auto text-xs font-bold text-red-700">
+              {ccCount}/{ccStickers.length}
+            </span>
+          </div>
+          <p className="text-[10px] text-gray-400 mb-2 italic">
+            🥤 Solo se encuentran dentro de etiquetas desprendibles de botellas Coca-Cola de 20oz edición especial
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {ccStickers.map((s) => (
+              <CCStickerCard key={s.id} sticker={s} acquired={acquired.has(s.id)} onToggle={onToggle} />
             ))}
           </div>
         </div>
