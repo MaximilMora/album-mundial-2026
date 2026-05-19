@@ -62,18 +62,64 @@ function SpecialStickerCard({ sticker, acquired, onToggle }: SpecialStickerCardP
   );
 }
 
+interface Sticker00CardProps {
+  sticker: SpecialSticker;
+  acquired: boolean;
+  onToggle: (id: string) => void;
+}
+
+function Sticker00Card({ sticker, acquired, onToggle }: Sticker00CardProps) {
+  return (
+    <button
+      onClick={() => onToggle(sticker.id)}
+      title={acquired ? "Clic para quitar" : "Clic para marcar como obtenida"}
+      className={cn(
+        "relative flex flex-col items-center justify-center rounded-xl border-2 p-3 transition-all duration-200 cursor-pointer select-none",
+        "w-[110px] h-[130px] shrink-0",
+        acquired
+          ? "border-purple-400 bg-gradient-to-b from-purple-50 via-pink-50 to-amber-50 shadow-lg shadow-purple-200"
+          : "border-dashed border-gray-300 bg-white hover:border-purple-300 hover:shadow-md opacity-70"
+      )}
+    >
+      <span className="absolute top-1.5 left-2 text-[10px] font-black text-purple-400 leading-none tracking-wider">
+        #00
+      </span>
+
+      {acquired && (
+        <span className="absolute top-1 right-1.5 text-sm leading-none">⭐</span>
+      )}
+
+      <div className="flex flex-col items-center gap-1.5">
+        <span className="text-4xl leading-none">🌍</span>
+        <span className="text-[9px] font-black text-center text-purple-700 leading-tight tracking-wide uppercase">
+          FIFA World Cup
+        </span>
+        <span className="text-[11px] font-black text-amber-500 leading-none tracking-wider">
+          2026™
+        </span>
+      </div>
+
+      <span className="absolute bottom-1.5 text-[8px] font-bold text-purple-400 tracking-widest">
+        PANINI
+      </span>
+    </button>
+  );
+}
+
 interface SpecialSectionProps {
+  sticker00: SpecialSticker;
   fwcStickers: SpecialSticker[];
   ccStickers: SpecialSticker[];
   acquired: Set<string>;
   onToggle: (id: string) => void;
 }
 
-export function SpecialSection({ fwcStickers, ccStickers, acquired, onToggle }: SpecialSectionProps) {
+export function SpecialSection({ sticker00, fwcStickers, ccStickers, acquired, onToggle }: SpecialSectionProps) {
+  const s00Acquired = acquired.has(sticker00.id) ? 1 : 0;
   const fwcCount = fwcStickers.filter((s) => acquired.has(s.id)).length;
   const ccCount = ccStickers.filter((s) => acquired.has(s.id)).length;
-  const total = fwcStickers.length + ccStickers.length;
-  const totalAcquired = fwcCount + ccCount;
+  const total = 1 + fwcStickers.length + ccStickers.length;
+  const totalAcquired = s00Acquired + fwcCount + ccCount;
 
   return (
     <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200">
@@ -83,7 +129,7 @@ export function SpecialSection({ fwcStickers, ccStickers, acquired, onToggle }: 
           <span className="text-xl">✨</span>
           <div>
             <h2 className="text-base font-black tracking-wide">Figuritas Especiales</h2>
-            <p className="text-[11px] text-gray-400">FWC · CC</p>
+            <p className="text-[11px] text-gray-400">#00 · FWC · CC</p>
           </div>
         </div>
         <div className="flex items-center gap-3">
@@ -100,6 +146,23 @@ export function SpecialSection({ fwcStickers, ccStickers, acquired, onToggle }: 
       </div>
 
       <div className="bg-gradient-to-b from-gray-50 to-white p-4 flex flex-col gap-5">
+
+        {/* Sticker #00 */}
+        <div>
+          <div className="flex items-center gap-2 mb-2">
+            <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full tracking-widest">
+              #00
+            </span>
+            <span className="text-xs text-gray-500 font-medium">Figurita especial de apertura</span>
+            <span className="ml-auto text-xs font-bold text-purple-700">{s00Acquired}/1</span>
+          </div>
+          <Sticker00Card
+            sticker={sticker00}
+            acquired={acquired.has(sticker00.id)}
+            onToggle={onToggle}
+          />
+        </div>
+
         {/* FWC block */}
         <div>
           <div className="flex items-center gap-2 mb-2">

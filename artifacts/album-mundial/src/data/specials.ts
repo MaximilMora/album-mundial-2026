@@ -1,10 +1,18 @@
 export interface SpecialSticker {
   id: string;
-  number: number;
+  number: number | "00";
   label: string;
   sublabel: string;
-  category: "FWC" | "CC";
+  category: "FWC" | "CC" | "00";
 }
+
+export const sticker00: SpecialSticker = {
+  id: "sticker-00",
+  number: "00",
+  label: "FIFA World Cup 2026™",
+  sublabel: "00",
+  category: "00",
+};
 
 export const fwcStickers: SpecialSticker[] = [
   { id: "fwc-1",  number: 1,  label: "Logo oficial",       sublabel: "FWC", category: "FWC" },

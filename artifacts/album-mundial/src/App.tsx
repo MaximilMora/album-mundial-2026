@@ -1,11 +1,11 @@
 import { useMemo, useState } from "react";
 import { groups, TOTAL_STICKERS } from "@/data/mundial2026";
-import { fwcStickers, ccStickers } from "@/data/specials";
+import { sticker00, fwcStickers, ccStickers } from "@/data/specials";
 import { useAlbum } from "@/hooks/useAlbum";
 import { GroupSection } from "@/components/GroupSection";
 import { SpecialSection } from "@/components/SpecialSection";
 
-const SPECIAL_TOTAL = fwcStickers.length + ccStickers.length;
+const SPECIAL_TOTAL = 1 + fwcStickers.length + ccStickers.length;
 
 const GROUP_COLORS = [
   "bg-red-600",
@@ -150,6 +150,7 @@ export default function App() {
       {/* Special stickers + Groups */}
       <main className="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-4 pb-12">
         <SpecialSection
+          sticker00={sticker00}
           fwcStickers={fwcStickers}
           ccStickers={ccStickers}
           acquired={acquired}
