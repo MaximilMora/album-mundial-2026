@@ -17,22 +17,24 @@ export const sticker00: SpecialSticker = {
 
 // FWC1–FWC8: Introducción al torneo (foil)
 // FWC9–FWC19: Museo FIFA — Historia de campeones (foil)
-// CC1–CC12: Figuritas exclusivas Coca-Cola × Panini
-// Solo se obtienen dentro de etiquetas de botellas Coca-Cola de 20oz (edición especial)
-// Página doble dedicada en el álbum oficial. Set Norteamérica (US & Canadá).
+// CC1–CC14: Figuritas exclusivas Coca-Cola × Panini — Versión LATAM (14 figuritas)
+// Solo se obtienen dentro de etiquetas desprendibles de botellas Coca-Cola de 20oz edición especial.
+// Página doble dedicada en el álbum oficial.
 export const ccStickers: SpecialSticker[] = [
-  { id: "cc-1",  number: 1,  label: "Lamine Yamal",      sublabel: "España",      category: "CC" },
-  { id: "cc-2",  number: 2,  label: "Joshua Kimmich",    sublabel: "Alemania",    category: "CC" },
-  { id: "cc-3",  number: 3,  label: "Harry Kane",        sublabel: "Inglaterra",  category: "CC" },
-  { id: "cc-4",  number: 4,  label: "Santiago Giménez",  sublabel: "México",      category: "CC" },
-  { id: "cc-5",  number: 5,  label: "Antonee Robinson",  sublabel: "USA",         category: "CC" },
-  { id: "cc-6",  number: 6,  label: "Jefferson Lerma",   sublabel: "Colombia",    category: "CC" },
-  { id: "cc-7",  number: 7,  label: "Edson Álvarez",     sublabel: "México",      category: "CC" },
-  { id: "cc-8",  number: 8,  label: "Virgil van Dijk",   sublabel: "Países Bajos",category: "CC" },
-  { id: "cc-9",  number: 9,  label: "Alphonso Davies",   sublabel: "Canadá",      category: "CC" },
-  { id: "cc-10", number: 10, label: "Weston McKennie",   sublabel: "USA",         category: "CC" },
-  { id: "cc-11", number: 11, label: "Lautaro Martínez",  sublabel: "Argentina",   category: "CC" },
-  { id: "cc-12", number: 12, label: "Gabriel Magalhães", sublabel: "Brasil",      category: "CC" },
+  { id: "cc-1",  number: 1,  label: "Lamine Yamal",       sublabel: "España",       category: "CC" },
+  { id: "cc-2",  number: 2,  label: "Joshua Kimmich",     sublabel: "Alemania",     category: "CC" },
+  { id: "cc-3",  number: 3,  label: "Harry Kane",         sublabel: "Inglaterra",   category: "CC" },
+  { id: "cc-4",  number: 4,  label: "Edson Álvarez",      sublabel: "México",       category: "CC" },
+  { id: "cc-5",  number: 5,  label: "Joško Gvardiol",     sublabel: "Croacia",      category: "CC" },
+  { id: "cc-6",  number: 6,  label: "Federico Valverde",  sublabel: "Uruguay",      category: "CC" },
+  { id: "cc-7",  number: 7,  label: "Jefferson Lerma",    sublabel: "Colombia",     category: "CC" },
+  { id: "cc-8",  number: 8,  label: "Enner Valencia",     sublabel: "Ecuador",      category: "CC" },
+  { id: "cc-9",  number: 9,  label: "Jordan Ayew",        sublabel: "Ghana",        category: "CC" },
+  { id: "cc-10", number: 10, label: "Virgil van Dijk",    sublabel: "Países Bajos", category: "CC" },
+  { id: "cc-11", number: 11, label: "Alphonso Davies",    sublabel: "Canadá",       category: "CC" },
+  { id: "cc-12", number: 12, label: "Emiliano Martínez",  sublabel: "Argentina",    category: "CC" },
+  { id: "cc-13", number: 13, label: "Raúl Jiménez",       sublabel: "México",       category: "CC" },
+  { id: "cc-14", number: 14, label: "Lautaro Martínez",   sublabel: "Argentina",    category: "CC" },
 ];
 
 export const fwcStickers: SpecialSticker[] = [

@@ -161,7 +161,7 @@ export function SpecialSection({ sticker00, fwcStickers, ccStickers, acquired, o
           <span className="text-xl">✨</span>
           <div>
             <h2 className="text-base font-black tracking-wide">Figuritas Especiales</h2>
-            <p className="text-[11px] text-gray-400">#00 · FWC1–19 · CC1–12 Coca-Cola</p>
+            <p className="text-[11px] text-gray-400">#00 · FWC1–19 · CC1–14 Coca-Cola</p>
           </div>
         </div>
         <div className="flex items-center gap-3">
@@ -229,7 +229,7 @@ export function SpecialSection({ sticker00, fwcStickers, ccStickers, acquired, o
         <div>
           <div className="flex items-center gap-2 mb-2">
             <span className="bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full tracking-widest">
-              CC 1–12
+              CC 1–14
             </span>
             <span className="text-xs text-gray-500 font-medium">Exclusivas Coca-Cola × Panini — Solo en botellas especiales</span>
             <span className="ml-auto text-xs font-bold text-red-700">
