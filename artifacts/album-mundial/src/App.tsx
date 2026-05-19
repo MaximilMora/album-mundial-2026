@@ -1,7 +1,11 @@
 import { useMemo, useState } from "react";
 import { groups, TOTAL_STICKERS } from "@/data/mundial2026";
+import { fwcStickers, ccStickers } from "@/data/specials";
 import { useAlbum } from "@/hooks/useAlbum";
 import { GroupSection } from "@/components/GroupSection";
+import { SpecialSection } from "@/components/SpecialSection";
+
+const SPECIAL_TOTAL = fwcStickers.length + ccStickers.length;
 
 const GROUP_COLORS = [
   "bg-red-600",
@@ -23,7 +27,8 @@ export default function App() {
   const [showConfirm, setShowConfirm] = useState(false);
 
   const acquiredCount = acquired.size;
-  const pct = Math.round((acquiredCount / TOTAL_STICKERS) * 100);
+  const grandTotal = TOTAL_STICKERS + SPECIAL_TOTAL;
+  const pct = Math.round((acquiredCount / grandTotal) * 100);
 
   const completedGroups = useMemo(() => {
     return groups.filter((g) =>
@@ -65,7 +70,7 @@ export default function App() {
               <div className="flex justify-between items-center">
                 <span className="text-xs font-semibold text-blue-200">Progreso del álbum</span>
                 <span className="text-sm font-black text-yellow-400">
-                  {acquiredCount} / {TOTAL_STICKERS}
+                  {acquiredCount} / {grandTotal}
                 </span>
               </div>
               <div className="h-2.5 w-full rounded-full bg-white/20 overflow-hidden">
@@ -142,8 +147,14 @@ export default function App() {
         </div>
       </div>
 
-      {/* Groups */}
+      {/* Special stickers + Groups */}
       <main className="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-4 pb-12">
+        <SpecialSection
+          fwcStickers={fwcStickers}
+          ccStickers={ccStickers}
+          acquired={acquired}
+          onToggle={toggle}
+        />
         {groups.map((group, i) => (
           <GroupSection
             key={group.id}
