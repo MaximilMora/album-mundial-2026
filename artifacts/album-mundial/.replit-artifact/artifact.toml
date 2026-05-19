@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Álbum Mundial 2026"
+version = "1.0.0"
+id = "artifacts/album-mundial"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21251
+
+[services.development]
+run = "pnpm --filter @workspace/album-mundial run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/album-mundial", "run", "build" ]
+publicDir = "artifacts/album-mundial/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21251"
+BASE_PATH = "/"
