@@ -42,8 +42,8 @@ export function getCountryStickers(country: Country): Sticker[] {
   });
   // #13 — Foto grupal
   stickers.push({ id: `${country.id}-13`, number: 13, label: "Foto Grupal", type: "team" });
-  // #14–21 — jugadores 12–19
-  country.players.slice(11).forEach((p, i) => {
+  // #14–20 — jugadores 12–18
+  country.players.slice(11, 18).forEach((p, i) => {
     stickers.push({
       id: `${country.id}-${i + 14}`,
       number: i + 14,
