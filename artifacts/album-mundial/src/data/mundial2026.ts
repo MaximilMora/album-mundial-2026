@@ -167,10 +167,12 @@ export const groups: Group[] = [
         ],
       },
       {
+        // Confirmed order: Vasilj(2), Dedic(3), Kolasinac(4), Muharemovic(5), Mujakic(6),
+        // Katic(7), Hadziahmetovic(8), Tahirovic(9), Gigovic(10), Sunjic(11), Basic(12),
+        // Burnic(14), Bajraktarevic(15), Memic(16), Demirovic(17), Dzeko(18), Bazdar(19), Tabakovic(20)
         id: "bosnia", name: "Bosnia-Herz.", flag: "🇧🇦",
         players: [
           { name: "Vasilj", position: "PO" },
-          { name: "Memic", position: "PO" },
           { name: "Dedic", position: "DEF" },
           { name: "Kolasinac", position: "DEF" },
           { name: "Muharemovic", position: "DEF" },
@@ -183,6 +185,7 @@ export const groups: Group[] = [
           { name: "Basic", position: "MED" },
           { name: "Burnic", position: "MED" },
           { name: "Bajraktarevic", position: "DEL" },
+          { name: "Memic", position: "PO" },
           { name: "Demirovic", position: "DEL" },
           { name: "Dzeko", position: "DEL" },
           { name: "Bazdar", position: "DEL" },
@@ -213,6 +216,8 @@ export const groups: Group[] = [
         ],
       },
       {
+        // Confirmed: Kobel(2), ..., Zakaria(10), Xhaka(11), ..., Jashari(14), ...,
+        // Amdouni(16), ..., Ndoye(18), Manzambi(19), ...
         id: "switzerland", name: "Suiza", flag: "🇨🇭",
         players: [
           { name: "Kobel", position: "PO" },
@@ -222,17 +227,17 @@ export const groups: Group[] = [
           { name: "Elvedi", position: "DEF" },
           { name: "Amenda", position: "DEF" },
           { name: "Widmer", position: "DEF" },
-          { name: "Xhaka", position: "MED" },
           { name: "Freuler", position: "MED" },
-          { name: "Rieder", position: "MED" },
-          { name: "Embolo", position: "DEL" },
-          { name: "Vargas", position: "DEL" },
-          { name: "Ndoye", position: "DEL" },
-          { name: "Jashari", position: "MED" },
-          { name: "Schär", position: "DEF" },
           { name: "Zakaria", position: "MED" },
+          { name: "Xhaka", position: "MED" },
+          { name: "Rieder", position: "MED" },
+          { name: "Jashari", position: "MED" },
           { name: "Aebischer", position: "MED" },
-          { name: "Okafor", position: "DEL" },
+          { name: "Amdouni", position: "DEL" },
+          { name: "Embolo", position: "DEL" },
+          { name: "Ndoye", position: "DEL" },
+          { name: "Manzambi", position: "DEL" },
+          { name: "Vargas", position: "DEL" },
         ],
       },
     ],
@@ -243,6 +248,10 @@ export const groups: Group[] = [
     id: "C", name: "Grupo C",
     countries: [
       {
+        // Confirmed: Alisson(2), Bento(3), Marquinhos(4), Militão(5), Gabriel(6),
+        // Danilo(7), Wesley(8), Paquetá(9), Casemiro(10), Guimarães(11), Luiz Henrique(12),
+        // Vinicius(14), Rodrygo(15), J.Pedro(16), Matheus Cunha(17), Martinelli(18),
+        // Raphinha(19), Estêvão(20)
         id: "brazil", name: "Brasil", flag: "🇧🇷",
         players: [
           { name: "Alisson", position: "PO" },
@@ -252,17 +261,17 @@ export const groups: Group[] = [
           { name: "Gabriel", position: "DEF" },
           { name: "Danilo", position: "DEF" },
           { name: "Wesley", position: "DEF" },
+          { name: "Paquetá", position: "MED" },
           { name: "Casemiro", position: "MED" },
           { name: "Guimarães", position: "MED" },
-          { name: "Rodrygo", position: "DEL" },
-          { name: "Estêvão", position: "DEL" },
+          { name: "Luiz Henrique", position: "MED" },
           { name: "Vinicius", position: "DEL" },
-          { name: "Raphinha", position: "DEL" },
-          { name: "Endrick", position: "DEL" },
+          { name: "Rodrygo", position: "DEL" },
           { name: "J. Pedro", position: "DEL" },
+          { name: "Matheus Cunha", position: "DEL" },
           { name: "Martinelli", position: "DEL" },
-          { name: "Gerson", position: "MED" },
-          { name: "Paquetá", position: "MED" },
+          { name: "Raphinha", position: "DEL" },
+          { name: "Estêvão", position: "DEL" },
         ],
       },
       {
@@ -289,49 +298,55 @@ export const groups: Group[] = [
         ],
       },
       {
+        // Confirmed: Placide(2), Arcus(3), Expérience(4), Duverne(5), Adé(6), Lacroix(7),
+        // Metusala(8), Delcroix(9), L.Pierre(10), D.Jean Jacques(11), Bellegarde(12),
+        // Attys(14), Etienne Jr.(15), Casimir(16), Providence(17), Nazon(18), Deedson(19), Pierrot(20)
         id: "haiti", name: "Haití", flag: "🇭🇹",
         players: [
           { name: "Placide", position: "PO" },
-          { name: "A. Pierre", position: "PO" },
-          { name: "Duverger", position: "PO" },
-          { name: "Adé", position: "DEF" },
           { name: "Arcus", position: "DEF" },
           { name: "Expérience", position: "DEF" },
           { name: "Duverne", position: "DEF" },
+          { name: "Adé", position: "DEF" },
           { name: "Lacroix", position: "DEF" },
-          { name: "Paugain", position: "DEF" },
-          { name: "Delcroix", position: "DEF" },
-          { name: "Thermoncy", position: "DEF" },
+          { name: "Metusala", position: "MED" },
+          { name: "Delcroix", position: "MED" },
           { name: "L. Pierre", position: "MED" },
           { name: "D. Jean Jacques", position: "MED" },
-          { name: "Sainté", position: "MED" },
           { name: "Bellegarde", position: "MED" },
-          { name: "W. Pierre", position: "MED" },
-          { name: "D. Simon", position: "MED" },
+          { name: "Attys", position: "DEL" },
+          { name: "Etienne Jr.", position: "DEL" },
+          { name: "Casimir", position: "MED" },
+          { name: "Providence", position: "DEL" },
           { name: "Nazon", position: "DEL" },
+          { name: "Deedson", position: "DEL" },
+          { name: "Pierrot", position: "DEL" },
         ],
       },
       {
+        // Confirmed: Gunn(2), Hickey(3), Robertson(4), Souttar(5), Hanley(6), McTominay(7),
+        // Ferguson(8), Christie(9), McGinn(10), Adams(11), Doak(12),
+        // Hendry(14), Tierney(15), McKenna(16), Ralston(17), Gilmour(18), McLean(19), Dykes(20)
         id: "scotland", name: "Escocia", flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         players: [
           { name: "Gunn", position: "PO" },
-          { name: "Hendry", position: "DEF" },
-          { name: "Tierney", position: "DEF" },
           { name: "Hickey", position: "DEF" },
           { name: "Robertson", position: "DEF" },
-          { name: "McKenna", position: "DEF" },
           { name: "Souttar", position: "DEF" },
-          { name: "Ralston", position: "DEF" },
           { name: "Hanley", position: "DEF" },
           { name: "McTominay", position: "MED" },
-          { name: "Gilmour", position: "MED" },
           { name: "Ferguson", position: "MED" },
           { name: "Christie", position: "MED" },
-          { name: "McLean", position: "MED" },
           { name: "McGinn", position: "MED" },
-          { name: "Dykes", position: "DEL" },
           { name: "Adams", position: "DEL" },
           { name: "Doak", position: "DEL" },
+          { name: "Hendry", position: "DEF" },
+          { name: "Tierney", position: "DEF" },
+          { name: "McKenna", position: "DEF" },
+          { name: "Ralston", position: "DEF" },
+          { name: "Gilmour", position: "MED" },
+          { name: "McLean", position: "MED" },
+          { name: "Dykes", position: "DEL" },
         ],
       },
     ],
@@ -342,6 +357,7 @@ export const groups: Group[] = [
     id: "D", name: "Grupo D",
     countries: [
       {
+        // Confirmed from checklistinsider sample (host nation – no logo sticker in section)
         id: "usa", name: "Estados Unidos", flag: "🇺🇸",
         players: [
           { name: "Freese", position: "PO" },
@@ -388,6 +404,9 @@ export const groups: Group[] = [
         ],
       },
       {
+        // Confirmed: Ryan(2), Gauci(3), Souttar(4), Circati(5), Bos(6), Behich(7),
+        // Burgess(8), L.Miller(9), Degenek(10), Irvine(11), McGree(12),
+        // O'Neill(14), Metcalfe(15), Yazbek(16), Goodwin(17), Yengi(18), Irankunda(19), Touré(20)
         id: "australia", name: "Australia", flag: "🇦🇺",
         players: [
           { name: "Ryan", position: "PO" },
@@ -411,26 +430,29 @@ export const groups: Group[] = [
         ],
       },
       {
+        // Confirmed Cartophilic: Çakır(2), Müldür(3), Çelik(4), Bardakçı(5), Söyüncü(6),
+        // Demiral(7), Kadıoğlu(8), Ayhan(9), Yüksek(10), Çalhanoğlu(11), Kökçü(12),
+        // Arda(14), Kahveci(15), Akgün(16), Can Uzun(17), B.A.Yılmaz(18), Aktürkoğlu(19), K.Yıldız(20)
         id: "turkey", name: "Turquía", flag: "🇹🇷",
         players: [
-          { name: "Günok", position: "PO" },
-          { name: "Bayındır", position: "PO" },
-          { name: "Demiral", position: "DEF" },
-          { name: "Akaydin", position: "DEF" },
-          { name: "Kadıoğlu", position: "DEF" },
+          { name: "Çakır", position: "PO" },
+          { name: "Müldür", position: "DEF" },
           { name: "Çelik", position: "DEF" },
           { name: "Bardakçı", position: "DEF" },
+          { name: "Söyüncü", position: "DEF" },
+          { name: "Demiral", position: "DEF" },
+          { name: "Kadıoğlu", position: "DEF" },
           { name: "Ayhan", position: "MED" },
-          { name: "Özcan", position: "MED" },
-          { name: "Çalhanoğlu", position: "MED" },
           { name: "Yüksek", position: "MED" },
-          { name: "Yokuşlu", position: "MED" },
+          { name: "Çalhanoğlu", position: "MED" },
+          { name: "Kökçü", position: "MED" },
           { name: "Arda", position: "DEL" },
-          { name: "K. Yıldız", position: "DEL" },
+          { name: "Kahveci", position: "MED" },
+          { name: "Akgün", position: "MED" },
+          { name: "Can Uzun", position: "DEL" },
           { name: "B.A. Yılmaz", position: "DEL" },
-          { name: "Yazıcı", position: "DEL" },
-          { name: "Tosun", position: "DEL" },
-          { name: "Burak", position: "DEL" },
+          { name: "Aktürkoğlu", position: "DEL" },
+          { name: "K. Yıldız", position: "DEL" },
         ],
       },
     ],
@@ -441,15 +463,18 @@ export const groups: Group[] = [
     id: "E", name: "Grupo E",
     countries: [
       {
+        // Confirmed: Ter Stegen(2), Tah(3), Raum(4), Schlotterbeck(5), Rüdiger(6),
+        // Anton(7), Baku(8), Mittelstädt(9), Kimmich(10), Wirtz(11), Nmecha(12),
+        // Goretzka(14), Musiala(15), Gnabry(16), Havertz(17), Sané(18), Adeyemi(19), Woltemade(20)
         id: "germany", name: "Alemania", flag: "🇩🇪",
         players: [
-          { name: "Baumann", position: "PO" },
           { name: "Ter Stegen", position: "PO" },
           { name: "Tah", position: "DEF" },
+          { name: "Raum", position: "DEF" },
           { name: "Schlotterbeck", position: "DEF" },
           { name: "Rüdiger", position: "DEF" },
-          { name: "Koch", position: "DEF" },
-          { name: "Pavlović", position: "MED" },
+          { name: "Anton", position: "DEF" },
+          { name: "Baku", position: "DEF" },
           { name: "Mittelstädt", position: "DEF" },
           { name: "Kimmich", position: "MED" },
           { name: "Wirtz", position: "MED" },
@@ -464,6 +489,9 @@ export const groups: Group[] = [
         ],
       },
       {
+        // Confirmed: Room(2), Obispo(3), Floranus(4), Gaari(5), Brenet(6), Van Eijma(7),
+        // Sambo(8), Comenencia(9), Roemeratoe(10), J.Bacuna(11), L.Bacuna(12),
+        // Chong(14), Gorre(15), Margaritha(16), Locadia(17), Antonisse(18), Kastaneer(19), Hansen(20)
         id: "curacao", name: "Curazao", flag: "🇨🇼",
         players: [
           { name: "Room", position: "PO" },
@@ -487,6 +515,9 @@ export const groups: Group[] = [
         ],
       },
       {
+        // Confirmed: Y.Fofana(2), Konan(3), Singo(4), Kossounou(5), Ndicka(6), Boly(7),
+        // Agbadou(8), O.Diomandé(9), Kessié(10), S.Fofana(11), Sangaré(12),
+        // Gbamin(14), A.Diallo(15), Haller(16), Adringra(17), Y.Diomandé(18), Guessand(19), Diakité(20)
         id: "ivorycoast", name: "Costa de Marfil", flag: "🇨🇮",
         players: [
           { name: "Y. Fofana", position: "PO" },
@@ -639,6 +670,9 @@ export const groups: Group[] = [
     id: "G", name: "Grupo G",
     countries: [
       {
+        // Confirmed: Courtois(2), Theate(3), Castagne(4), Debast(5), Mechele(6), De Cuyper(7),
+        // Meunier(8), Tielemans(9), Onana(10), Raskin(11), Saelemaekers(12),
+        // Vanaken(14), De Bruyne(15), Doku(16), De Ketelaere(17), Trossard(18), Openda(19), Lukaku(20)
         id: "belgium", name: "Bélgica", flag: "🇧🇪",
         players: [
           { name: "Courtois", position: "PO" },
@@ -738,6 +772,9 @@ export const groups: Group[] = [
     id: "H", name: "Grupo H",
     countries: [
       {
+        // Confirmed: Simón(2), Le Normand(3), Laporte(4), Huijsen(5), Porro(6), Carvajal(7),
+        // Cucurella(8), Zubimendi(9), Rodri(10), Pedri(11), F.Ruiz(12),
+        // Merino(14), Oyarzabal(15), Yamal(16), Olmo(17), N.Williams(18), F.Torres(19), Morata(20)
         id: "spain", name: "España", flag: "🇪🇸",
         players: [
           { name: "Simón", position: "PO" },
@@ -752,12 +789,12 @@ export const groups: Group[] = [
           { name: "Pedri", position: "MED" },
           { name: "F. Ruiz", position: "MED" },
           { name: "Merino", position: "MED" },
+          { name: "Oyarzabal", position: "DEL" },
           { name: "Yamal", position: "DEL" },
           { name: "Olmo", position: "DEL" },
           { name: "N. Williams", position: "DEL" },
           { name: "F. Torres", position: "DEL" },
           { name: "Morata", position: "DEL" },
-          { name: "Oyarzabal", position: "DEL" },
         ],
       },
       {
@@ -837,29 +874,34 @@ export const groups: Group[] = [
     id: "I", name: "Grupo I",
     countries: [
       {
+        // Confirmed: Maignan(2), Brice Samba(3), Saliba(4), Upamecano(5), Koundé(6),
+        // T.Hernández(7), L.Hernández(8), Kanté(9), Tchouaméni(10), Griezmann(11), Camavinga(12),
+        // Rabiot(14), Dembélé(15), Thuram(16), Barcola(17), Kolo Muani(18), Mbappé(19), Zaïre-Emery(20)
         id: "france", name: "Francia", flag: "🇫🇷",
         players: [
           { name: "Maignan", position: "PO" },
-          { name: "T. Hernández", position: "DEF" },
+          { name: "Brice Samba", position: "PO" },
           { name: "Saliba", position: "DEF" },
-          { name: "Koundé", position: "DEF" },
-          { name: "Konaté", position: "DEF" },
           { name: "Upamecano", position: "DEF" },
-          { name: "Digne", position: "DEF" },
+          { name: "Koundé", position: "DEF" },
+          { name: "T. Hernández", position: "DEF" },
+          { name: "L. Hernández", position: "DEF" },
+          { name: "Kanté", position: "MED" },
           { name: "Tchouaméni", position: "MED" },
+          { name: "Griezmann", position: "DEL" },
           { name: "Camavinga", position: "MED" },
-          { name: "Koné", position: "MED" },
           { name: "Rabiot", position: "MED" },
-          { name: "Olise", position: "DEL" },
           { name: "Dembélé", position: "DEL" },
+          { name: "Thuram", position: "DEL" },
           { name: "Barcola", position: "DEL" },
-          { name: "Doué", position: "DEL" },
-          { name: "Coman", position: "DEL" },
-          { name: "Ekitike", position: "DEL" },
+          { name: "Kolo Muani", position: "DEL" },
           { name: "Mbappé", position: "DEL" },
+          { name: "Zaïre-Emery", position: "MED" },
         ],
       },
       {
+        // Confirmed partial: Mendy(2), ..., Niakhaté(4), ..., El Hadji(7), ...,
+        // Gueye(9), ..., P.M.Sarr(11), ..., Jackson(19)
         id: "senegal", name: "Senegal", flag: "🇸🇳",
         players: [
           { name: "Mendy", position: "PO" },
@@ -870,8 +912,8 @@ export const groups: Group[] = [
           { name: "El Hadji", position: "DEL" },
           { name: "Koulibaly", position: "DEF" },
           { name: "Gueye", position: "MED" },
-          { name: "P.M. Sarr", position: "MED" },
           { name: "P. Gueye", position: "MED" },
+          { name: "P.M. Sarr", position: "MED" },
           { name: "H. Diarra", position: "MED" },
           { name: "L. Camara", position: "MED" },
           { name: "Mané", position: "DEL" },
@@ -906,6 +948,9 @@ export const groups: Group[] = [
         ],
       },
       {
+        // Confirmed: Nyland(2), Ryerson(3), Østigård(4), Ajer(5), Pedersen(6), Wolfe(7),
+        // Heggem(8), Thorsby(9), Ødegaard(10), Berge(11), Schjelderup(12),
+        // Berg(14), Haaland(15), Sørloth(16), Dønnum(17), Strand Larsen(18), Nusa(19), Bobb(20)
         id: "norway", name: "Noruega", flag: "🇳🇴",
         players: [
           { name: "Nyland", position: "PO" },
@@ -936,6 +981,9 @@ export const groups: Group[] = [
     id: "J", name: "Grupo J",
     countries: [
       {
+        // Confirmed: E.Martínez(2), Molina(3), Romero(4), Otamendi(5), Tagliafico(6),
+        // Balerdi(7), Enzo(8), Mac Allister(9), De Paul(10), Palacios(11), Paredes(12),
+        // Nico Paz(14), Mastantuono(15), Nico González(16), Messi(17), Lautaro(18), J.Álvarez(19), G.Simeone(20)
         id: "argentina", name: "Argentina", flag: "🇦🇷",
         players: [
           { name: "E. Martínez", position: "PO" },
@@ -1005,6 +1053,7 @@ export const groups: Group[] = [
         ],
       },
       {
+        // Confirmed order matches current data
         id: "jordan", name: "Jordania", flag: "🇯🇴",
         players: [
           { name: "Abulaila", position: "PO" },
@@ -1035,29 +1084,33 @@ export const groups: Group[] = [
     id: "K", name: "Grupo K",
     countries: [
       {
+        // Confirmed: Costa(2), Sá(3), Patrício(4), Semedo(5), Dias(6), Pepe(7),
+        // Nuno Mendes(8), Dalot(9), Vitinha(10), R.Neves(11), Palhinha(12),
+        // B.Fernandes(14), Bernardo(15), Pedro Neto(16), Leão(17), João Félix(18), G.Ramos(19), Ronaldo(20)
         id: "portugal", name: "Portugal", flag: "🇵🇹",
         players: [
           { name: "Costa", position: "PO" },
-          { name: "Patrício", position: "PO" },
           { name: "Sá", position: "PO" },
+          { name: "Patrício", position: "PO" },
+          { name: "Semedo", position: "DEF" },
           { name: "Dias", position: "DEF" },
+          { name: "Pepe", position: "DEF" },
           { name: "Mendes", position: "DEF" },
           { name: "Dalot", position: "DEF" },
-          { name: "Pepe", position: "DEF" },
-          { name: "A. Silva", position: "DEF" },
-          { name: "Cancelo", position: "DEF" },
-          { name: "Neves", position: "MED" },
           { name: "Vitinha", position: "MED" },
+          { name: "R. Neves", position: "MED" },
           { name: "Palhinha", position: "MED" },
-          { name: "Bernardo", position: "MED" },
           { name: "Fernandes", position: "MED" },
-          { name: "Leão", position: "DEL" },
-          { name: "Ramos", position: "DEL" },
+          { name: "Bernardo", position: "MED" },
           { name: "Neto", position: "DEL" },
+          { name: "Leão", position: "DEL" },
+          { name: "João Félix", position: "DEL" },
+          { name: "Ramos", position: "DEL" },
           { name: "Ronaldo", position: "DEL" },
         ],
       },
       {
+        // Confirmed order matches current data
         id: "drcongo", name: "DR Congo", flag: "🇨🇩",
         players: [
           { name: "Mpasi", position: "PO" },
@@ -1081,6 +1134,7 @@ export const groups: Group[] = [
         ],
       },
       {
+        // Confirmed order matches current data
         id: "uzbekistan", name: "Uzbekistán", flag: "🇺🇿",
         players: [
           { name: "U. Yusupov", position: "PO" },
@@ -1104,6 +1158,9 @@ export const groups: Group[] = [
         ],
       },
       {
+        // Confirmed: C.Vargas(2), Ospina(3), D.Sánchez(4), Mina(5), Muñoz(6), Mojica(7),
+        // Lucumí(8), S.Arias(9), Lerma(10), Castaño(11), Ríos(12),
+        // James(14), Quintero(15), Carrascal(16), J.Arias(17), Córdoba(18), L.Suárez(19), Díaz(20)
         id: "colombia", name: "Colombia", flag: "🇨🇴",
         players: [
           { name: "C. Vargas", position: "PO" },
@@ -1134,13 +1191,16 @@ export const groups: Group[] = [
     id: "L", name: "Grupo L",
     countries: [
       {
+        // Confirmed: Pickford(2), Stones(3), Guehi(4), Konsa(5), Alexander-Arnold(6),
+        // R.James(7), Burn(8), Henderson(9), Rice(10), Bellingham(11), Palmer(12),
+        // Rogers(14), Gordon(15), Foden(16), Saka(17), Kane(18), Rashford(19), Watkins(20)
         id: "england", name: "Inglaterra", flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         players: [
           { name: "Pickford", position: "PO" },
-          { name: "Walker", position: "DEF" },
           { name: "Stones", position: "DEF" },
-          { name: "Alexander-Arnold", position: "DEF" },
           { name: "Guehi", position: "DEF" },
+          { name: "Konsa", position: "DEF" },
+          { name: "Alexander-Arnold", position: "DEF" },
           { name: "R. James", position: "DEF" },
           { name: "Burn", position: "DEF" },
           { name: "Henderson", position: "MED" },
@@ -1157,52 +1217,61 @@ export const groups: Group[] = [
         ],
       },
       {
+        // Confirmed CRO2-12: Livaković(2), Ćaleta-Car(3), Gvardiol(4), Stanišić(5),
+        // Perišić(6), Modrić(7), Kovačić(8), Majer(9), M.Pašalić(10), Budimir(11), Kramarić(12)
+        // CRO14-20 not publicly confirmed; best available order used
         id: "croatia", name: "Croacia", flag: "🇭🇷",
         players: [
           { name: "Livaković", position: "PO" },
           { name: "Ćaleta-Car", position: "DEF" },
           { name: "Gvardiol", position: "DEF" },
           { name: "Stanišić", position: "DEF" },
-          { name: "Vušković", position: "DEF" },
-          { name: "Šutalo", position: "DEF" },
-          { name: "Jakić", position: "MED" },
+          { name: "Perišić", position: "DEL" },
           { name: "Modrić", position: "MED" },
           { name: "Kovačić", position: "MED" },
-          { name: "Baturina", position: "MED" },
           { name: "Majer", position: "MED" },
           { name: "M. Pašalić", position: "MED" },
-          { name: "Sučić", position: "MED" },
-          { name: "Perišić", position: "DEL" },
-          { name: "Sosa", position: "DEF" },
           { name: "Budimir", position: "DEL" },
           { name: "Kramarić", position: "DEL" },
+          { name: "Baturina", position: "MED" },
+          { name: "Šutalo", position: "DEF" },
+          { name: "Jakić", position: "MED" },
+          { name: "Vušković", position: "DEF" },
+          { name: "Sučić", position: "MED" },
+          { name: "Sosa", position: "DEF" },
           { name: "Ivanović", position: "DEL" },
         ],
       },
       {
+        // Confirmed: Ati-Zigi(2), Lamptey(3), Salisu(4), Seidu(5), Djiku(6), G.Mensah(7),
+        // Yirenkyi(8), Issahaku(9), Partey(10), Samed(11), Sulemana(12),
+        // Kudus(14), I.Williams(15), J.Ayew(16), A.Ayew(17), Paintsil(18), Bukari(19), Semenyo(20)
         id: "ghana", name: "Ghana", flag: "🇬🇭",
         players: [
           { name: "Ati-Zigi", position: "PO" },
-          { name: "Amartey", position: "DEF" },
+          { name: "Lamptey", position: "DEF" },
+          { name: "Salisu", position: "DEF" },
+          { name: "Seidu", position: "DEF" },
           { name: "Djiku", position: "DEF" },
-          { name: "Odoi", position: "DEF" },
           { name: "G. Mensah", position: "DEF" },
+          { name: "Yirenkyi", position: "MED" },
+          { name: "Issahaku", position: "MED" },
           { name: "Partey", position: "MED" },
-          { name: "Kudus", position: "MED" },
-          { name: "J. Ayew", position: "DEL" },
-          { name: "A. Ayew", position: "MED" },
-          { name: "Semenyo", position: "DEL" },
-          { name: "Nuamah", position: "DEL" },
+          { name: "Samed", position: "MED" },
           { name: "Sulemana", position: "DEL" },
+          { name: "Kudus", position: "DEL" },
           { name: "I. Williams", position: "DEL" },
-          { name: "Issahaku", position: "DEL" },
+          { name: "J. Ayew", position: "DEL" },
+          { name: "A. Ayew", position: "DEL" },
+          { name: "Paintsil", position: "DEL" },
           { name: "Bukari", position: "DEL" },
-          { name: "Ekuban", position: "DEL" },
-          { name: "Kyereh", position: "MED" },
-          { name: "Afena-Gyan", position: "DEL" },
+          { name: "Semenyo", position: "DEL" },
         ],
       },
       {
+        // Confirmed: Mosquera(2), Mejia(3), Escobar(4), Andrade(5), Murillo(6), Davis(7),
+        // Córdoba(8), Blackman(9), C.Martínez(10), Godoy(11), Carrasquilla(12),
+        // Bárcenas(14), Harvey(15), I.Díaz(16), Fajardo(17), Waterman(18), J.L.Rodríguez(19), Quintero(20)
         id: "panama", name: "Panamá", flag: "🇵🇦",
         players: [
           { name: "Mosquera", position: "PO" },
