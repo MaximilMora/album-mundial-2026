@@ -62,7 +62,7 @@ export function Sticker({ sticker, countryFlag, acquired, onToggle }: StickerPro
 
       <div className="w-full flex flex-col items-center gap-0.5">
         <span className="text-[9px] font-semibold text-gray-700 leading-tight text-center max-w-full truncate px-0.5">
-          {isFlag ? "Bandera" : isTeam ? "Equipo" : sticker.label.split(" ")[0]}
+          {isFlag ? "Bandera" : isTeam ? "Equipo" : sticker.label}
         </span>
         {sticker.position && (
           <span className={cn("text-[8px] font-bold px-1 rounded-full leading-tight", positionColors[sticker.position])}>
