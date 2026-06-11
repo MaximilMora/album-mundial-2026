@@ -19,7 +19,7 @@ run = "pnpm --filter @workspace/album-mundial run dev"
 
 [services.production]
 build = [ "pnpm", "--filter", "@workspace/album-mundial", "run", "build" ]
-publicDir = "artifacts/album-mundial/dist/public"
+publicDir = "artifacts/album-mundial/dist"
 serve = "static"
 
 [[services.production.rewrites]]
